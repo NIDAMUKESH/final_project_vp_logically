@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F6335BF-B71E-4530-BBD7-60F65C955B7A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>winSchoolMS</RootNamespace>
+    <AssemblyName>winSchoolMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbSchoolMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSchoolMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentDetailsVeiw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentDetailsVeiw.Designer.cs">
+      <DependentUpon>frmStudentDetailsVeiw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentEducationalDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentEducationalDetails.Designer.cs">
+      <DependentUpon>frmStudentEducationalDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourseAllocate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseAllocate.Designer.cs">
+      <DependentUpon>frmCourseAllocate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourseAllocateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseAllocateDetail.Designer.cs">
+      <DependentUpon>frmCourseAllocateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgetpassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgetpassword.Designer.cs">
+      <DependentUpon>frmForgetpassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentAttendance.Designer.cs">
+      <DependentUpon>frmStudentAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherAttendance.Designer.cs">
+      <DependentUpon>frmTeacherAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherDetails.Designer.cs">
+      <DependentUpon>frmTeacherDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentPersonalDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentPersonalDetails.Designer.cs">
+      <DependentUpon>frmStudentPersonalDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttendenceVeiw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttendenceVeiw.Designer.cs">
+      <DependentUpon>frmAttendenceVeiw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamination .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamination .Designer.cs">
+      <DependentUpon>frmExamination .cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDefultarstudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDefultarstudent.Designer.cs">
+      <DependentUpon>frmDefultarstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExaminationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExaminationDetail.Designer.cs">
+      <DependentUpon>FrmExaminationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFeeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFeeDetail.Designer.cs">
+      <DependentUpon>frmFeeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSignUp.Designer.cs">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherDetailsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherDetailsView.Designer.cs">
+      <DependentUpon>frmTeacherDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmStudentDetailsVeiw.resx">
+      <DependentUpon>frmStudentDetailsVeiw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentEducationalDetails.resx">
+      <DependentUpon>frmStudentEducationalDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourseAllocate.resx">
+      <DependentUpon>frmCourseAllocate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourseAllocateDetail.resx">
+      <DependentUpon>frmCourseAllocateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgetpassword.resx">
+      <DependentUpon>frmForgetpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentAttendance.resx">
+      <DependentUpon>frmStudentAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherAttendance.resx">
+      <DependentUpon>frmTeacherAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherDetails.resx">
+      <DependentUpon>frmTeacherDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentPersonalDetails.resx">
+      <DependentUpon>frmStudentPersonalDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendenceVeiw.resx">
+      <DependentUpon>frmAttendenceVeiw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamination .resx">
+      <DependentUpon>frmExamination .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDefultarstudent.resx">
+      <DependentUpon>frmDefultarstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExaminationDetail.resx">
+      <DependentUpon>FrmExaminationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFeeDetail.resx">
+      <DependentUpon>frmFeeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSignUp.resx">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherDetailsView.resx">
+      <DependentUpon>frmTeacherDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dbSchoolMSDataSet.xsc">
+      <DependentUpon>dbSchoolMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbSchoolMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbSchoolMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbSchoolMSDataSet.xss">
+      <DependentUpon>dbSchoolMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_Dummy_pic-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school-management.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_pic-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1311589_667.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector Illustration.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forget Password.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
