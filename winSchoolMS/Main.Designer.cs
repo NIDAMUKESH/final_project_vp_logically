@@ -38,6 +38,8 @@
             this.educationalInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsDetailViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teacherDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teacherDetailsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.teacherToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,8 +54,6 @@
             this.examinationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.examinationDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miscellinousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teacherDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teacherDetailsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -130,6 +130,20 @@
             this.teacherToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.teacherToolStripMenuItem.Text = "Teacher";
             // 
+            // teacherDetailsToolStripMenuItem
+            // 
+            this.teacherDetailsToolStripMenuItem.Name = "teacherDetailsToolStripMenuItem";
+            this.teacherDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teacherDetailsToolStripMenuItem.Text = "Teacher Information";
+            this.teacherDetailsToolStripMenuItem.Click += new System.EventHandler(this.teacherDetailsToolStripMenuItem_Click);
+            // 
+            // teacherDetailsViewToolStripMenuItem
+            // 
+            this.teacherDetailsViewToolStripMenuItem.Name = "teacherDetailsViewToolStripMenuItem";
+            this.teacherDetailsViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teacherDetailsViewToolStripMenuItem.Text = "Teacher Details View";
+            this.teacherDetailsViewToolStripMenuItem.Click += new System.EventHandler(this.teacherDetailsViewToolStripMenuItem_Click);
+            // 
             // attendanceToolStripMenuItem
             // 
             this.attendanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -143,21 +157,21 @@
             // studentToolStripMenuItem1
             // 
             this.studentToolStripMenuItem1.Name = "studentToolStripMenuItem1";
-            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.studentToolStripMenuItem1.Text = "Student";
             this.studentToolStripMenuItem1.Click += new System.EventHandler(this.studentToolStripMenuItem1_Click);
             // 
             // teacherToolStripMenuItem1
             // 
             this.teacherToolStripMenuItem1.Name = "teacherToolStripMenuItem1";
-            this.teacherToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.teacherToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.teacherToolStripMenuItem1.Text = "Teacher";
             this.teacherToolStripMenuItem1.Click += new System.EventHandler(this.teacherToolStripMenuItem1_Click);
             // 
             // viewAttendanceToolStripMenuItem
             // 
             this.viewAttendanceToolStripMenuItem.Name = "viewAttendanceToolStripMenuItem";
-            this.viewAttendanceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewAttendanceToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.viewAttendanceToolStripMenuItem.Text = "View Attendance";
             this.viewAttendanceToolStripMenuItem.Click += new System.EventHandler(this.viewAttendanceToolStripMenuItem_Click);
             // 
@@ -173,14 +187,14 @@
             // feesToolStripMenuItem
             // 
             this.feesToolStripMenuItem.Name = "feesToolStripMenuItem";
-            this.feesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.feesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.feesToolStripMenuItem.Text = "Fees";
             this.feesToolStripMenuItem.Click += new System.EventHandler(this.feesToolStripMenuItem_Click);
             // 
             // defaulterStudentToolStripMenuItem
             // 
             this.defaulterStudentToolStripMenuItem.Name = "defaulterStudentToolStripMenuItem";
-            this.defaulterStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defaulterStudentToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.defaulterStudentToolStripMenuItem.Text = "Defaulter Student";
             this.defaulterStudentToolStripMenuItem.Click += new System.EventHandler(this.defaulterStudentToolStripMenuItem_Click);
             // 
@@ -219,14 +233,14 @@
             // examinationToolStripMenuItem1
             // 
             this.examinationToolStripMenuItem1.Name = "examinationToolStripMenuItem1";
-            this.examinationToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.examinationToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
             this.examinationToolStripMenuItem1.Text = "Examination";
             this.examinationToolStripMenuItem1.Click += new System.EventHandler(this.examinationToolStripMenuItem1_Click);
             // 
             // examinationDetailToolStripMenuItem
             // 
             this.examinationDetailToolStripMenuItem.Name = "examinationDetailToolStripMenuItem";
-            this.examinationDetailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.examinationDetailToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.examinationDetailToolStripMenuItem.Text = "Examination Detail";
             this.examinationDetailToolStripMenuItem.Click += new System.EventHandler(this.examinationDetailToolStripMenuItem_Click);
             // 
@@ -235,20 +249,6 @@
             this.miscellinousToolStripMenuItem.Name = "miscellinousToolStripMenuItem";
             this.miscellinousToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.miscellinousToolStripMenuItem.Text = "Miscellinous";
-            // 
-            // teacherDetailsToolStripMenuItem
-            // 
-            this.teacherDetailsToolStripMenuItem.Name = "teacherDetailsToolStripMenuItem";
-            this.teacherDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.teacherDetailsToolStripMenuItem.Text = "Teacher Information";
-            this.teacherDetailsToolStripMenuItem.Click += new System.EventHandler(this.teacherDetailsToolStripMenuItem_Click);
-            // 
-            // teacherDetailsViewToolStripMenuItem
-            // 
-            this.teacherDetailsViewToolStripMenuItem.Name = "teacherDetailsViewToolStripMenuItem";
-            this.teacherDetailsViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.teacherDetailsViewToolStripMenuItem.Text = "Teacher Details View";
-            this.teacherDetailsViewToolStripMenuItem.Click += new System.EventHandler(this.teacherDetailsViewToolStripMenuItem_Click);
             // 
             // Main
             // 

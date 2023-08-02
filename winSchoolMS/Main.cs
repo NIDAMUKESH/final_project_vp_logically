@@ -200,5 +200,7 @@ namespace winSchoolMS
             obj.MdiParent = this;
             obj.Show();
         }
+
+       
     }
 }

@@ -292,5 +292,68 @@
   <ItemGroup>
     <None Include="Resources\Forget Password.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Studenticon-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-learning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-learning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-graduate-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-graduate-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-graduate-64__2_-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

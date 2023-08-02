@@ -30,23 +30,17 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtFatherName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtEnrollmentNo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtClass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSection = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtTotalMarks = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtObtainedMarks = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbExamType = new System.Windows.Forms.ComboBox();
-            this.dtpDateOfExam = new System.Windows.Forms.DateTimePicker();
             this.cmbSubject = new System.Windows.Forms.ComboBox();
             this.txtPercentage = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,10 +48,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtGrade = new System.Windows.Forms.TextBox();
-            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.txtEvaluated = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.txtStudentName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dvExamination = new System.Windows.Forms.DataGridView();
@@ -65,6 +57,9 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvExamination)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,28 +79,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(167, 152);
+            this.label4.Location = new System.Drawing.Point(944, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 4;
-            // 
-            // txtFatherName
-            // 
-            this.txtFatherName.Location = new System.Drawing.Point(1015, 129);
-            this.txtFatherName.Name = "txtFatherName";
-            this.txtFatherName.Size = new System.Drawing.Size(164, 20);
-            this.txtFatherName.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Window;
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(940, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Father Name";
             // 
             // txtEnrollmentNo
             // 
@@ -127,7 +104,7 @@
             // 
             // txtClass
             // 
-            this.txtClass.Location = new System.Drawing.Point(238, 186);
+            this.txtClass.Location = new System.Drawing.Point(1015, 126);
             this.txtClass.Name = "txtClass";
             this.txtClass.Size = new System.Drawing.Size(164, 20);
             this.txtClass.TabIndex = 19;
@@ -137,29 +114,18 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Window;
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(168, 190);
+            this.label1.Location = new System.Drawing.Point(945, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Class";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(166, 297);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Date of Exam";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Window;
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(940, 185);
+            this.label5.Location = new System.Drawing.Point(551, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 24;
@@ -167,7 +133,7 @@
             // 
             // txtSection
             // 
-            this.txtSection.Location = new System.Drawing.Point(627, 186);
+            this.txtSection.Location = new System.Drawing.Point(240, 185);
             this.txtSection.Name = "txtSection";
             this.txtSection.Size = new System.Drawing.Size(164, 20);
             this.txtSection.TabIndex = 27;
@@ -177,26 +143,15 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.Window;
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(548, 189);
+            this.label8.Location = new System.Drawing.Point(161, 188);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 26;
             this.label8.Text = "Section";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.Window;
-            this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(165, 243);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Exam Type";
-            // 
             // txtTotalMarks
             // 
-            this.txtTotalMarks.Location = new System.Drawing.Point(627, 241);
+            this.txtTotalMarks.Location = new System.Drawing.Point(238, 242);
             this.txtTotalMarks.Name = "txtTotalMarks";
             this.txtTotalMarks.Size = new System.Drawing.Size(164, 20);
             this.txtTotalMarks.TabIndex = 31;
@@ -206,7 +161,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Window;
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(548, 238);
+            this.label10.Location = new System.Drawing.Point(159, 239);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 13);
             this.label10.TabIndex = 30;
@@ -214,7 +169,7 @@
             // 
             // txtObtainedMarks
             // 
-            this.txtObtainedMarks.Location = new System.Drawing.Point(1016, 237);
+            this.txtObtainedMarks.Location = new System.Drawing.Point(627, 239);
             this.txtObtainedMarks.Name = "txtObtainedMarks";
             this.txtObtainedMarks.Size = new System.Drawing.Size(164, 20);
             this.txtObtainedMarks.TabIndex = 33;
@@ -224,33 +179,11 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Window;
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label11.Location = new System.Drawing.Point(935, 242);
+            this.label11.Location = new System.Drawing.Point(546, 244);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 13);
             this.label11.TabIndex = 32;
             this.label11.Text = "Obtained Marks";
-            // 
-            // cmbExamType
-            // 
-            this.cmbExamType.FormattingEnabled = true;
-            this.cmbExamType.Items.AddRange(new object[] {
-            "Test Paper",
-            "Weekly",
-            "Monthly",
-            "Annual"});
-            this.cmbExamType.Location = new System.Drawing.Point(238, 240);
-            this.cmbExamType.Name = "cmbExamType";
-            this.cmbExamType.Size = new System.Drawing.Size(164, 21);
-            this.cmbExamType.TabIndex = 34;
-            // 
-            // dtpDateOfExam
-            // 
-            this.dtpDateOfExam.AllowDrop = true;
-            this.dtpDateOfExam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateOfExam.Location = new System.Drawing.Point(238, 293);
-            this.dtpDateOfExam.Name = "dtpDateOfExam";
-            this.dtpDateOfExam.Size = new System.Drawing.Size(164, 20);
-            this.dtpDateOfExam.TabIndex = 35;
             // 
             // cmbSubject
             // 
@@ -266,14 +199,14 @@
             "Chemistry",
             "Biology",
             "Sindhi"});
-            this.cmbSubject.Location = new System.Drawing.Point(1016, 182);
+            this.cmbSubject.Location = new System.Drawing.Point(627, 188);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.Size = new System.Drawing.Size(164, 21);
             this.cmbSubject.TabIndex = 36;
             // 
             // txtPercentage
             // 
-            this.txtPercentage.Location = new System.Drawing.Point(1015, 288);
+            this.txtPercentage.Location = new System.Drawing.Point(1015, 244);
             this.txtPercentage.Name = "txtPercentage";
             this.txtPercentage.Size = new System.Drawing.Size(164, 20);
             this.txtPercentage.TabIndex = 41;
@@ -283,7 +216,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.Window;
             this.label12.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label12.Location = new System.Drawing.Point(940, 294);
+            this.label12.Location = new System.Drawing.Point(947, 249);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 13);
             this.label12.TabIndex = 40;
@@ -291,7 +224,7 @@
             // 
             // txtResult
             // 
-            this.txtResult.Location = new System.Drawing.Point(627, 291);
+            this.txtResult.Location = new System.Drawing.Point(627, 297);
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(164, 20);
             this.txtResult.TabIndex = 39;
@@ -301,7 +234,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.Window;
             this.label13.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label13.Location = new System.Drawing.Point(552, 297);
+            this.label13.Location = new System.Drawing.Point(552, 303);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 13);
             this.label13.TabIndex = 38;
@@ -312,7 +245,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.Window;
             this.label14.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label14.Location = new System.Drawing.Point(170, 353);
+            this.label14.Location = new System.Drawing.Point(170, 300);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(36, 13);
             this.label14.TabIndex = 37;
@@ -320,22 +253,14 @@
             // 
             // txtGrade
             // 
-            this.txtGrade.Location = new System.Drawing.Point(238, 350);
+            this.txtGrade.Location = new System.Drawing.Point(238, 297);
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.Size = new System.Drawing.Size(164, 20);
             this.txtGrade.TabIndex = 42;
             // 
-            // txtRemarks
-            // 
-            this.txtRemarks.Location = new System.Drawing.Point(1016, 340);
-            this.txtRemarks.Multiline = true;
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(163, 71);
-            this.txtRemarks.TabIndex = 46;
-            // 
             // txtEvaluated
             // 
-            this.txtEvaluated.Location = new System.Drawing.Point(627, 350);
+            this.txtEvaluated.Location = new System.Drawing.Point(1015, 300);
             this.txtEvaluated.Name = "txtEvaluated";
             this.txtEvaluated.Size = new System.Drawing.Size(164, 20);
             this.txtEvaluated.TabIndex = 45;
@@ -345,22 +270,11 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.Window;
             this.label15.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label15.Location = new System.Drawing.Point(548, 353);
+            this.label15.Location = new System.Drawing.Point(945, 307);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 13);
             this.label15.TabIndex = 44;
             this.label15.Text = "Evaluated By";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.Window;
-            this.label16.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label16.Location = new System.Drawing.Point(941, 349);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(50, 13);
-            this.label16.TabIndex = 43;
-            this.label16.Text = "ReMarks";
             // 
             // txtStudentName
             // 
@@ -376,9 +290,9 @@
             this.label17.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label17.Location = new System.Drawing.Point(548, 133);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 13);
+            this.label17.Size = new System.Drawing.Size(54, 13);
             this.label17.TabIndex = 48;
-            this.label17.Text = "Student Name";
+            this.label17.Text = "Full Name";
             // 
             // dvExamination
             // 
@@ -434,22 +348,54 @@
             this.panel1.Size = new System.Drawing.Size(1380, 65);
             this.panel1.TabIndex = 56;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(1030, 192);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(47, 17);
+            this.radioButton1.TabIndex = 57;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Final";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(1083, 192);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(42, 17);
+            this.radioButton2.TabIndex = 58;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Mid";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(942, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Exam Type";
+            // 
             // frmExamination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.dvExamination);
             this.Controls.Add(this.txtStudentName);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtRemarks);
             this.Controls.Add(this.txtEvaluated);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtGrade);
             this.Controls.Add(this.txtPercentage);
             this.Controls.Add(this.label12);
@@ -457,23 +403,17 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cmbSubject);
-            this.Controls.Add(this.dtpDateOfExam);
-            this.Controls.Add(this.cmbExamType);
             this.Controls.Add(this.txtObtainedMarks);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtTotalMarks);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtSection);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtClass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEnrollmentNo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtFatherName);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Name = "frmExamination";
@@ -492,23 +432,17 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtFatherName;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEnrollmentNo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSection;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTotalMarks;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtObtainedMarks;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbExamType;
-        private System.Windows.Forms.DateTimePicker dtpDateOfExam;
         private System.Windows.Forms.ComboBox cmbSubject;
         private System.Windows.Forms.TextBox txtPercentage;
         private System.Windows.Forms.Label label12;
@@ -516,10 +450,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtGrade;
-        private System.Windows.Forms.TextBox txtRemarks;
         private System.Windows.Forms.TextBox txtEvaluated;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtStudentName;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DataGridView dvExamination;
@@ -527,5 +459,8 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label3;
     }
 }
