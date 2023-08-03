@@ -273,9 +273,39 @@ namespace winSchoolMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap student_with_graduation_cap__1_ {
+            get {
+                object obj = ResourceManager.GetObject("student-with-graduation-cap (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap student1 {
+            get {
+                object obj = ResourceManager.GetObject("student1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Studenticon_ {
             get {
                 object obj = ResourceManager.GetObject("Studenticon-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teacher__1_ {
+            get {
+                object obj = ResourceManager.GetObject("teacher (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

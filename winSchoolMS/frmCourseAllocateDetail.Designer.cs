@@ -159,6 +159,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Course Allocate Detail";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmCourseAllocateDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvSearch)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

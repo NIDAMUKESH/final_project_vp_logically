@@ -51,8 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFatherName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCourseId = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvCourseAllocate)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +65,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(927, 132);
+            this.txtFullName.Location = new System.Drawing.Point(617, 129);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(168, 20);
             this.txtFullName.TabIndex = 5;
@@ -77,7 +75,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Window;
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(866, 136);
+            this.label3.Location = new System.Drawing.Point(556, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 4;
@@ -85,7 +83,7 @@
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(254, 129);
+            this.txtCourseName.Location = new System.Drawing.Point(255, 210);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.Size = new System.Drawing.Size(168, 20);
             this.txtCourseName.TabIndex = 11;
@@ -95,7 +93,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Window;
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(180, 133);
+            this.label6.Location = new System.Drawing.Point(181, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 10;
@@ -126,7 +124,7 @@
             // 
             // txtTeacherID
             // 
-            this.txtTeacherID.Location = new System.Drawing.Point(617, 129);
+            this.txtTeacherID.Location = new System.Drawing.Point(255, 129);
             this.txtTeacherID.Name = "txtTeacherID";
             this.txtTeacherID.Size = new System.Drawing.Size(168, 20);
             this.txtTeacherID.TabIndex = 20;
@@ -137,7 +135,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Window;
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(553, 132);
+            this.label10.Location = new System.Drawing.Point(191, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 13);
             this.label10.TabIndex = 19;
@@ -207,16 +205,16 @@
             // 
             this.cmbClass.FormattingEnabled = true;
             this.cmbClass.Items.AddRange(new object[] {
-            "Class 1st",
-            "Class 2nd",
-            "Class 3rd",
-            "Class 4th",
-            "Class 5th",
-            "Class 6th",
-            "Class 7th",
-            "Class 8th",
-            "Class 9th",
-            "Matric"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.cmbClass.Location = new System.Drawing.Point(617, 212);
             this.cmbClass.Name = "cmbClass";
             this.cmbClass.Size = new System.Drawing.Size(168, 21);
@@ -273,7 +271,7 @@
             // 
             // txtFatherName
             // 
-            this.txtFatherName.Location = new System.Drawing.Point(254, 213);
+            this.txtFatherName.Location = new System.Drawing.Point(942, 129);
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(168, 20);
             this.txtFatherName.TabIndex = 55;
@@ -283,29 +281,11 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Window;
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(182, 217);
+            this.label4.Location = new System.Drawing.Point(870, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 54;
             this.label4.Text = "Father Name";
-            // 
-            // txtCourseId
-            // 
-            this.txtCourseId.Location = new System.Drawing.Point(109, 169);
-            this.txtCourseId.Name = "txtCourseId";
-            this.txtCourseId.Size = new System.Drawing.Size(168, 20);
-            this.txtCourseId.TabIndex = 57;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Window;
-            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(35, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Course Name";
             // 
             // frmCourseAllocate
             // 
@@ -313,8 +293,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.txtCourseId);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFatherName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -373,7 +351,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFatherName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCourseId;
-        private System.Windows.Forms.Label label5;
     }
 }

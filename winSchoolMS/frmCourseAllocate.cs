@@ -13,7 +13,8 @@ namespace winSchoolMS
 {
     public partial class frmCourseAllocate : Form
     {
-        
+        string CourseId;
+
         public frmCourseAllocate()
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace winSchoolMS
                 txtFatherName.Text = string.Empty;
 
             }
+            txtFullName.Enabled = false;
 
         }
         private void btnInsert_Click(object sender, EventArgs e)
@@ -65,13 +67,24 @@ namespace winSchoolMS
             {
                 Section = "D";
             }
+            string checkQRY = "SELECT COUNT(*) FROM tblCourseDetail WHERE CourseName = '" + txtCourseName.Text + "' AND Class = '" + cmbClass.Text + "' AND Section = '" + Section + "'";
+            SqlCommand checkCmd = new SqlCommand(checkQRY, con1);
+            con1.Open();
+            int count = (int)checkCmd.ExecuteScalar();
+            con1.Close();
 
+            if (count > 0)
+            {
+                MessageBox.Show("This course is already assigned to another teacher.", "Course Already Assigned", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string QRY = "Insert into tblCourseDetail (CourseName, Teacher_id, FullName, FatherName, Class, Section) Values('" + txtCourseName.Text + "','" + txtTeacherID.Text + "','" + txtFullName.Text + "','" + txtFatherName.Text + "','" + cmbClass.Text + "','" + Section + "')";
             SqlCommand cmd = new SqlCommand(QRY, con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
 
+           
             txtTeacherID.Text = "";
             txtFullName.Text = "";
             txtFatherName.Text = "";
@@ -81,7 +94,7 @@ namespace winSchoolMS
             chkSecB.Checked = false;
             chkSecC.Checked = false;
             chkSecD.Checked = false;
-
+            txtFullName.Enabled = false;
             SqlDataAdapter da1 = new SqlDataAdapter("Select * from tblCourseDetail order by CourseId desc", con1);
             DataTable dt1 = new DataTable();
             da1.Fill(dt1);
@@ -110,16 +123,7 @@ namespace winSchoolMS
                 Section = "D";
             }
 
-            if (gvCourseAllocate.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Please select a row to update.");
-                return;
-            }
-
-            // Get the CourseId from the selected row in the DataGridView
-            int courseIdToUpdate = Convert.ToInt32(gvCourseAllocate.SelectedRows[0].Cells["CourseId"].Value);
-
-            string QRY = "UPDATE tblCourseDetail SET CourseName = '" + txtCourseName.Text + "', Teacher_id = '" + txtTeacherID.Text + "', Class = '" + cmbClass.Text + "', Section='" + Section + "' WHERE CourseId = " + courseIdToUpdate;
+            string QRY = "UPDATE tblCourseDetail set CourseName = '" + txtCourseName.Text + "', Teacher_id = '" + txtTeacherID.Text + "',FullName='"+ txtFullName.Text + "',FatherName='"+ txtFatherName.Text + "', Class = '" + cmbClass.Text + "', Section='" + Section + "' WHERE CourseId = "+CourseId;
 
             SqlCommand cmd = new SqlCommand(QRY, con);
             con.Open();
@@ -130,13 +134,13 @@ namespace winSchoolMS
             txtFullName.Text = "";
             txtFatherName.Text = "";
             txtCourseName.Text = "";
-            txtCourseId.Text = "";
+            //txtCourseId.Text = "";
             cmbClass.Text = "";
             chkSecA.Checked = false;
             chkSecB.Checked = false;
             chkSecC.Checked = false;
             chkSecD.Checked = false;
-
+            txtFullName.Enabled = false;
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM tblCourseDetail ORDER BY CourseId DESC", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -148,7 +152,7 @@ namespace winSchoolMS
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string QRY = "Delete from tblCourseDetail where Teacher_id =" + txtTeacherID.Text;
+            string QRY = "Delete from tblCourseDetail WHERE CourseId = " + CourseId;
             SqlCommand cmd = new SqlCommand(QRY, con);
             con.Open();
             cmd.ExecuteNonQuery();
@@ -159,7 +163,8 @@ namespace winSchoolMS
             da.Fill(dt);
             gvCourseAllocate.DataSource = dt;
 
-
+            txtFullName.Enabled = false;
+            
             MessageBox.Show("Data Deleted Sucessfully");
         }
 
@@ -174,7 +179,7 @@ namespace winSchoolMS
 
         private void gvCourseAllocate_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string CourseId = gvCourseAllocate.Rows[e.RowIndex].Cells[0].Value.ToString();
+             CourseId = gvCourseAllocate.Rows[e.RowIndex].Cells[0].Value.ToString();
             string Teacher_id = gvCourseAllocate.Rows[e.RowIndex].Cells[2].Value.ToString();
             string CourseName = gvCourseAllocate.Rows[e.RowIndex].Cells[1].Value.ToString();
             string FullName = gvCourseAllocate.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -215,7 +220,7 @@ namespace winSchoolMS
                 MessageBox.Show("not defined");
             }
             txtTeacherID.Text = Teacher_id;
-            txtCourseId.Text = CourseId;
+        //    txtCourseId.Text = CourseId;
             txtCourseName.Text = CourseName;
             txtFullName.Text = FullName;
             txtFatherName.Text = FatherName;

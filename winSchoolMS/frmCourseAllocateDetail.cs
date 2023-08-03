@@ -16,5 +16,10 @@ namespace winproject
         {
             InitializeComponent();
         }
+
+        private void frmCourseAllocateDetail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
