@@ -102,5 +102,6 @@ namespace winSchoolMS
             frmAttendenceVeiw obj = new frmAttendenceVeiw();
             obj.Show();
         }
+
     }
 }

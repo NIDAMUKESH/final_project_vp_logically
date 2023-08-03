@@ -44,34 +44,25 @@ namespace winSchoolMS
                 txtFatherName.Text = string.Empty;
 
             }
+          
             txtFullName.Enabled = false;
+            txtFatherName.Enabled = false;
 
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            SqlConnection con1 = new SqlConnection("Data Source=DESKTOP-F36B86I;Initial Catalog=dbSchoolMS;Integrated Security=True");
             string Section = string.Empty;
-            if (chkSecA.Checked)
-            {
-                Section = "A";
-            }
-            if (chkSecB.Checked)
-            {
-                Section = "B";
-            }
-            if (chkSecC.Checked)
-            {
-                Section = "C";
-            }
-            if (chkSecD.Checked)
-            {
-                Section = "D";
-            }
-            string checkQRY = "SELECT COUNT(*) FROM tblCourseDetail WHERE CourseName = '" + txtCourseName.Text + "' AND Class = '" + cmbClass.Text + "' AND Section = '" + Section + "'";
-            SqlCommand checkCmd = new SqlCommand(checkQRY, con1);
-            con1.Open();
+            if (chkSecA.Checked) Section += "A,";
+            if (chkSecB.Checked) Section += "B,";
+            if (chkSecC.Checked) Section += "C,";
+            if (chkSecD.Checked) Section += "D,";
+            if (!string.IsNullOrEmpty(Section))
+                Section = Section.TrimEnd(',');
+            string checkQRY = "SELECT COUNT(*) FROM tblCourseDetail WHERE CourseName = '" + txtCourseName.Text + "' AND Class = '" + cmbClass.Text + "' AND Section = '" + Section + Section+"'";
+            SqlCommand checkCmd = new SqlCommand(checkQRY, con);
+            con.Open();
             int count = (int)checkCmd.ExecuteScalar();
-            con1.Close();
+            con.Close();
 
             if (count > 0)
             {
@@ -95,7 +86,8 @@ namespace winSchoolMS
             chkSecC.Checked = false;
             chkSecD.Checked = false;
             txtFullName.Enabled = false;
-            SqlDataAdapter da1 = new SqlDataAdapter("Select * from tblCourseDetail order by CourseId desc", con1);
+            txtFatherName.Enabled = false;
+            SqlDataAdapter da1 = new SqlDataAdapter("Select * from tblCourseDetail order by CourseId desc", con);
             DataTable dt1 = new DataTable();
             da1.Fill(dt1);
             gvCourseAllocate.DataSource = dt1;
@@ -140,7 +132,9 @@ namespace winSchoolMS
             chkSecB.Checked = false;
             chkSecC.Checked = false;
             chkSecD.Checked = false;
+        
             txtFullName.Enabled = false;
+            txtFatherName.Enabled = false;
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM tblCourseDetail ORDER BY CourseId DESC", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -164,7 +158,8 @@ namespace winSchoolMS
             gvCourseAllocate.DataSource = dt;
 
             txtFullName.Enabled = false;
-            
+            txtFatherName.Enabled = false;
+
             MessageBox.Show("Data Deleted Sucessfully");
         }
 
@@ -220,7 +215,8 @@ namespace winSchoolMS
                 MessageBox.Show("not defined");
             }
             txtTeacherID.Text = Teacher_id;
-        //    txtCourseId.Text = CourseId;
+            txtFullName.Enabled = false;
+            txtFatherName.Enabled = false;
             txtCourseName.Text = CourseName;
             txtFullName.Text = FullName;
             txtFatherName.Text = FatherName;
@@ -237,11 +233,10 @@ namespace winSchoolMS
                 if (e.ColumnIndex == 6 && cell is DataGridViewCheckBoxCell checkBoxCell)
                 {
                     bool isChecked = (bool)checkBoxCell.Value;
-                    string section = gvCourseAllocate.Rows[e.RowIndex].Cells[6].Value.ToString();
-
-                    // Here you have the checkbox value and the associated section data
-                    // You can perform your update or other logic based on the checkbox value and section data
+                    string section = gvCourseAllocate.Rows[e.RowIndex].Cells[6].Value.ToString();                   
                 }
+                txtFullName.Enabled = false;
+                txtFatherName.Enabled = false;
             }
         }
 
