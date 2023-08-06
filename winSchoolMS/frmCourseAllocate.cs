@@ -181,39 +181,37 @@ namespace winSchoolMS
             string FatherName = gvCourseAllocate.Rows[e.RowIndex].Cells[4].Value.ToString();
             string Class = gvCourseAllocate.Rows[e.RowIndex].Cells[5].Value.ToString();
             string Section = gvCourseAllocate.Rows[e.RowIndex].Cells[6].Value.ToString().Trim();
-         
-            if (Section == "A")
+
+            chkSecA.Checked = false;
+            chkSecB.Checked = false;
+            chkSecC.Checked = false;
+            chkSecD.Checked = false;
+
+            string[] sections = Section.Split(',');
+            foreach (string section in sections)
             {
-                chkSecA.Checked = true;
-                chkSecB.Checked = false;
-                chkSecC.Checked = false;
-                chkSecD.Checked = false;
+                if (section == "A")
+                {
+                    chkSecA.Checked = true;
+                }
+                else if (section == "B")
+                {
+                    chkSecB.Checked = true;
+                }
+                else if (section == "C")
+                {
+                    chkSecC.Checked = true;
+                }
+                else if (section == "D")
+                {
+                    chkSecD.Checked = true;
+                }
+                else
+                {
+                    MessageBox.Show("Section not defined: " + section);
+                }
             }
-            else if (Section == "B")
-            {
-                chkSecA.Checked = false;
-                chkSecB.Checked = true;
-                chkSecC.Checked = false;
-                chkSecD.Checked = false;
-            }
-            else if (Section == "C")
-            {
-                chkSecA.Checked = false;
-                chkSecB.Checked = false;
-                chkSecC.Checked = true;
-                chkSecD.Checked = false;
-            }
-            else if (Section == "D")
-            {
-                chkSecA.Checked = false;
-                chkSecB.Checked = false;
-                chkSecC.Checked = false;
-                chkSecD.Checked = true;
-            }
-            else
-            {
-                MessageBox.Show("not defined");
-            }
+
             txtTeacherID.Text = Teacher_id;
             txtFullName.Enabled = false;
             txtFatherName.Enabled = false;
